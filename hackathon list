@@ -1,0 +1,461 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Хакатонов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        .hackathon-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hackathon-item {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .hackathon-item h2 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+
+        .hackathon-item p {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Список Хакатонов</h1>
+
+    <div class="hackathon-list">
+        <!-- Existing Hackathons -->
+        <div class="hackathon-item">
+            <h2>Hackathon 1</h2>
+            <p>Дата: 12 октября 2024</p>
+            <p>Место: Москва</p>
+            <p>Призы: 100 000 рублей</p>
+            <p>Организаторы: Технопарк Сколково</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 2</h2>
+            <p>Дата: 15 ноября 2024</p>
+            <p>Место: Онлайн</p>
+            <p>Призы: 50 000 рублей</p>
+            <p>Организаторы: Яндекс</p>
+        </div>
+
+        <!-- Add more hackathons as needed -->
+        <!-- Adding new hackathons for demonstration -->
+        <div class="hackathon-item">
+            <h2>Hackathon 3</h2>
+            <p>Дата: 20 декабря 2024</p>
+            <p>Место: Санкт-Петербург</p>
+            <p>Призы: 70 000 рублей</p>
+            <p>Организаторы: VK</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 4</h2>
+            <p>Дата: 10 января 2025</p>
+            <p>Место: Онлайн</p>
+            <p>Призы: 40 000 рублей</p>
+            <p>Организаторы: Mail.ru Group</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 5</h2>
+            <p>Дата: 5 февраля 2025</p>
+            <p>Место: Новосибирск</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Яндекс</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 6</h2>
+            <p>Дата: 18 марта 2025</p>
+            <p>Место: Москва</p>
+            <p>Призы: 150 000 рублей</p>
+            <p>Организаторы: Тинькофф</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 7</h2>
+            <p>Дата: 25 апреля 2025</p>
+            <p>Место: Онлайн</p>
+            <p>Призы: 120 000 рублей</p>
+            <p>Организаторы: Сбербанк</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 8</h2>
+            <p>Дата: 10 мая 2025</p>
+            <p>Место: Казань</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>Организаторы: IT-парк Казань</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 9</h2>
+            <p>Дата: 5 июня 2025</p>
+            <p>Место: Онлайн</p>
+            <p>Призы: 60 000 рублей</p>
+            <p>Организаторы: Ozon</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 10</h2>
+            <p>Дата: 15 июля 2025</p>
+            <p>Место: Екатеринбург</p>
+            <p>Призы: 110 000 рублей</p>
+            <p>Организаторы: Уральский IT-кластер</p>
+        </div>
+
+        <!-- Adding more hackathons -->
+        <!-- Continue adding until you reach 50 -->
+        <div class="hackathon-item">
+            <h2>Hackathon 11</h2>
+            <p>Дата: 25 августа 2025</p>
+            <p>Место: Красноярск</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Красноярский Инновационный Центр</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 12</h2>
+            <p>Дата: 30 сентября 2025</p>
+            <p>Место: Онлайн</p>
+            <p>Призы: 130 000 рублей</p>
+            <p>Организаторы: Сколково</p>
+        </div>
+
+        <!-- New Hackathons -->
+        <div class="hackathon-item">
+            <h2>Hackathon 13</h2>
+            <p>Дата: 1 октября 2025</p>
+            <p>Место: Челябинск</p>
+            <p>Призы: 95 000 рублей</p>
+            <p>Организаторы: Челябинский ГУ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 14</h2>
+            <p>Дата: 5 ноября 2025</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 120 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 15</h2>
+            <p>Дата: 10 ноября 2025</p>
+            <p>Место: Астана</p>
+            <p>Призы: 110 000 рублей</p>
+            <p>Организаторы: Нур-Султан Инновации</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 16</h2>
+            <p>Дата: 15 декабря 2025</p>
+            <p>Место: Ташкент</p>
+            <p>Призы: 100 000 рублей</p>
+            <p>Организаторы: Узбекистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 17</h2>
+            <p>Дата: 20 января 2026</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 18</h2>
+            <p>Дата: 5 февраля 2026</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 19</h2>
+            <p>Дата: 10 марта 2026</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 60 000 рублей</p>
+            <p>Организаторы: Кыргызский Инновационный Центр</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 20</h2>
+            <p>Дата: 15 апреля 2026</p>
+            <p>Место: Астана</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>
+
+Организаторы: Казахстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 21</h2>
+            <p>Дата: 20 мая 2026</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 85 000 рублей</p>
+            <p>Организаторы: Алматы Инновации</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 22</h2>
+            <p>Дата: 15 июня 2026</p>
+            <p>Место: Ташкент</p>
+            <p>Призы: 100 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 23</h2>
+            <p>Дата: 1 июля 2026</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 70 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 24</h2>
+            <p>Дата: 15 августа 2026</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 95 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 25</h2>
+            <p>Дата: 10 сентября 2026</p>
+            <p>Место: Астана</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 26</h2>
+            <p>Дата: 20 сентября 2026</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Кыргызстан Инновации</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 27</h2>
+            <p>Дата: 1 октября 2026</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 70 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 28</h2>
+            <p>Дата: 15 октября 2026</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 29</h2>
+            <p>Дата: 1 ноября 2026</p>
+            <p>Место: Ташкент</p>
+            <p>Призы: 85 000 рублей</p>
+            <p>Организаторы: Узбекистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 30</h2>
+            <p>Дата: 10 ноября 2026</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 31</h2>
+            <p>Дата: 15 ноября 2026</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 60 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 32</h2>
+            <p>Дата: 1 декабря 2026</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 100 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 33</h2>
+            <p>Дата: 15 декабря 2026</p>
+            <p>Место: Астана</p>
+            <p>Призы: 95 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 34</h2>
+            <p>Дата: 1 января 2027</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 85 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 35</h2>
+            <p>Дата: 10 января 2027</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 36</h2>
+            <p>Дата: 20 января 2027</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 37</h2>
+            <p>Дата: 5 февраля 2027</p>
+            <p>Место: Астана</p>
+            <p>Призы: 70 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 38</h2>
+            <p>Дата: 15 февраля 2027</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 39</h2>
+            <p>Дата: 1 марта 2027</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 60 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 40</h2>
+            <p>Дата: 10 марта 2027</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 95 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 41</h2>
+            <p>Дата: 15 марта 2027</p>
+            <p>Место: Астана</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 42</h2>
+            <p>Дата: 1 апреля 2027</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 85 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 43</h2>
+            <p>Дата: 10 апреля 2027</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 70 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 44</h2>
+            <p>Дата: 20 апреля 2027</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2
+
+>Hackathon 45</h2>
+            <p>Дата: 5 мая 2027</p>
+            <p>Место: Астана</p>
+            <p>Призы: 95 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 46</h2>
+            <p>Дата: 15 мая 2027</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 80 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 47</h2>
+            <p>Дата: 1 июня 2027</p>
+            <p>Место: Душанбе</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Таджикистан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 48</h2>
+            <p>Дата: 10 июня 2027</p>
+            <p>Место: Алматы</p>
+            <p>Призы: 90 000 рублей</p>
+            <p>Организаторы: Алматы Tech</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 49</h2>
+            <p>Дата: 15 июня 2027</p>
+            <p>Место: Астана</p>
+            <p>Призы: 85 000 рублей</p>
+            <p>Организаторы: Нур-Султан ИТ</p>
+        </div>
+
+        <div class="hackathon-item">
+            <h2>Hackathon 50</h2>
+            <p>Дата: 1 июля 2027</p>
+            <p>Место: Бишкек</p>
+            <p>Призы: 75 000 рублей</p>
+            <p>Организаторы: Кыргызстан ИТ</p>
+        </div>
+    </div>
+
+</body>
+</html>
