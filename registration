@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на хакатон</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Регистрация на хакатон</h1>
+    <form id="registrationForm">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="team">Выберите команду</label>
+        <select id="team" name="team">
+            <option value="Команда 1">Команда 1</option>
+            <option value="Команда 2">Команда 2</option>
+            <option value="Команда 3">Команда 3</option>
+            <option value="new">Создать новую команду</option>
+        </select>
+
+        <div id="newTeamField" style="display: none;">
+            <label for="newTeamName">Название новой команды</label>
+            <input type="text" id="newTeamName" name="newTeamName">
+        </div>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+
+    <a href="index.html" class="back-link">Назад на главную страницу</a>
+
+    <script>
+        const teamSelect = document.getElementById('team');
+        const newTeamField = document.getElementById('newTeamField');
+
+        teamSelect.addEventListener('change', function() {
+            if (teamSelect.value === 'new') {
+                newTeamField.style.display = 'block';
+            } else {
+                newTeamField.style.display = 'none';
+            }
+        });
+
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const team = teamSelect.value === 'new' ? document.getElementById('newTeamName').value : teamSelect.value;
+
+            alert(Регистрация завершена! Имя: ${name}, Email: ${email}, Команда: ${team});
+
+            // Сохранение информации о регистрации
+            localStorage.setItem('isRegistered', 'true');
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userTeam', team);
+
+            // Перенаправление на главную страницу
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
