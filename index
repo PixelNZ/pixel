@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лига Хакатона</title>
+    <style>
+        /* Стили для всей страницы */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Шапка страницы */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        /* Логотип в левом углу */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Поисковая строка в центре */
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Кнопки регистрации, профиля и перехода на страницу хакатонов в правом углу */
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .header-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Основной контент */
+        .main-content {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Левая часть страницы */
+        .left-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left-section h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .left-section p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* Правая часть страницы */
+        .right-section {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Картинки-кнопки */
+        .hackathon-card {
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hackathon-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 100px;
+        }
+
+        .hackathon-card:hover {
+            background-color: #eee;
+        }
+
+        .hackathon-card p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* ТОП-10 команд */
+        .top-teams {
+            width: 100%;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .top-teams h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .team-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .team-list li .team-name {
+            font-size: 18px;
+        }
+
+        .team-list li .team-score {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка страницы -->
+    <div class="header">
+        <!-- Логотип -->
+        <div class="logo">Лига Хакатона</div>
+
+        <!-- Поисковая строка -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Искать мероприятия, команды или участников..." oninput="search()">
+        </div>
+
+        <!-- Кнопки справа -->
+        <div class="header-buttons">
+            <button id="registerButton" onclick="register()">Регистрация</button>
+            <button id="profileButton" onclick="goToProfile()" style="display: none;">Профиль</button>
+            <button onclick="goToHackathonList()">Список хакатонов</button> <!-- Новая кнопка -->
+        </div>
+    </div>
+
+    <!-- Основной контент страницы -->
+    <div class="main-content">
+        <!-- Левая часть: текст с информацией -->
+        <div class="left-section">
+            <h1>Присоединяйся к Лиге Хакатона</h1>
+            <p>Открой для себя мир инноваций, креативности и командной работы! Лига Хакатона предлагает вам уникальную возможность принять участие в лучших хакатонах и показать свои навыки. Собирай команду, развивай проект и побеждай!</p>
+            <p>Не упусти свой шанс стать частью ведущего сообщества хакеров и создателей технологий. Присоединяйся к одному из хакатонов прямо сейчас!</p>
+        </div>
+
+        <!-- Правая часть: картинки-кнопки для хакатонов -->
+        <div class="right-section">
+            <a href="#" class="hackathon-card" onclick="goToHackathonRegistration('Hackathon 1')">
+                <img src="https://via.placeholder.com/150x100" alt="Hackathon 1">
+                <p>Hackathon 1</p>
+            </a>
+            <a href="#" class="hackathon-card" onclick="goToHackathonRegistration('Hackathon 2')">
+                <img src="https://via.placeholder.com/150x100" alt="Hackathon 2">
+                <p>Hackathon 2</p>
+            </a>
+            <a href="#" class="hackathon-card" onclick="goToHackathonRegistration('Hackathon 3')">
+                <img src="https://via.placeholder.com/150x100" alt="Hackathon 3">
+                <p>Hackathon 3</p>
+            </a>
+            <a href="#" class="hackathon-card" onclick="goToHackathonRegistration('Hackathon 4')">
+                <img src="https://via.placeholder.com/150x100" alt="Hackathon 4">
+                <p>Hackathon 4</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- ТОП-10 команд -->
+    <div class="top-teams">
+        <h2>ТОП-5 команд</h2>
+        <ul class="team-list" id="teamList">
+            <!-- Команды будут добавляться динамически -->
+        </ul>
+    </div>
+
+    <script>
+        // Пример списка команд с рейтингами
+        const teams = [
+            { name: 'Команда 1', score: 1500 },
+            { name: 'Команда 2', score: 1450 },
+            { name: 'Команда 3', score: 1400 },
+            { name: 'Команда 4', score: 1350 },
+            { name: 'Команда 5', score: 1300 },
+        ];
+
+        // Отображение списка команд в ТОП-5
+        function displayTopTeams() {
+            const teamList = document.getElementById('teamList');
+            teamList.innerHTML = ''; // Очищаем список перед заполнением
+
+            teams.forEach(team => {
+                const teamItem = document.createElement('li');
+                teamItem.innerHTML = `
+                    <span class="team-name">${team.name}</span>
+                    <span class="team-score">${team.score}</span>
+                `;
+                teamList.appendChild(teamItem);
+            });
+        }
+
+        // Поиск по мероприятиям, командам и участникам
+        function search() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            console.log(Поиск по запросу: ${query});
+            // Здесь будет логика поиска по мероприятиям, командам и участникам
+        }
+
+        // Проверка регистрации и отображение кнопки профиля
+        function checkRegistration() {
+            const isRegistered = localStorage.getItem('isRegistered');
+            if (isRegistered === 'true') {
+                document.getElementById('registerButton').style.display = 'none';
+                document.getElementById('profileButton').style.display = 'block';
+            } else {
+                document.getElementById('registerButton').style.display = 'block';
+                document.getElementById('profileButton').style.display = 'none';
+            }
+        }
+
+        // Функции для обработки нажатий на кнопки
+        function register() {
+            alert("Перенаправляем на страницу регистрации");
+            // Здесь будет перенаправление на страницу регистрации
+            window.location.href = "registration.html";
+        }
+
+        function goToProfile() {
+            alert("Переход в профиль участника");
+            // Здесь будет перенаправление на страницу профиля
+            window.location.href = "profile.html";
+        }
+
+        function goToHackathonRegistration(hackathonName) {
+            alert(Переход на страницу регистрации хакатона: ${hackathonName});
+            // Здесь будет логика для перенаправления на страницу регистрации конкретного хакатона
+            // Например, window.location.href = register_for_${hackathonName}.html;
+        }
+
+        function goToHackathonList() {
+            alert("Переход на страницу списка хакатонов");
+            window.location.href = "hackathon_list.html"; // Здесь будет переход на страницу списка хакатонов
+        }
+
+        // Инициализация списка команд при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            displayTopTeams();
+            checkRegistration(); // Проверка регистрации и отображение кнопок
+        });
+    </script>
+</body>
+</html>
